@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Glamm Test</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/common.css">
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-offset-1 col-md-8">
+				<h3><label>Records List</label></h3>
+			</div>
+			<div class="col-md-2">
+				<button id="addRecordBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Record</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-offset-1 col-md-10">
+				<table class="table" id="userRecordsTable">
+					<thead>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Mobile</th>
+						<th>Action</th>
+					</thead>
+					<tbody>
+						<tr><td>No Records Available</td></tr>
+					</tbody>
+				</table>	
+			</div>
+		</div>
+	</div>
+
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Submit Record Form</h4>
+					<div id="successMsg" style="color: green"></div>
+					<div id="errorMsg" style="color: red"></div>
+				</div>
+				<div class="modal-body">
+					<form id="recordForm" class="form-group" method="post">
+						<input class="form-control" type="text" id="name" name="name" placeholder="please enter name">
+						<input class="form-control" type="text" id="mobile" name="mobile" placeholder="please enter mobile number">
+						<input class="form-control" type="text" id="email" name="email" placeholder="please enter Email">
+						<input type="hidden" name="userId" id="userId">
+						<input class="btn btn-primary" id="submitForm" type="button" name="submit" value="Submit Record">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
